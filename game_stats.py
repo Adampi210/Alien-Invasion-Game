@@ -16,6 +16,7 @@ class GameStats:
     def reset_stats(self): # Here I will set the stats to default
         self.ships_left = self.settings.ship_limit # Number of ship lives
         self.score = 0
+        self.level = 1
 
     def get_high_score(self):
         file_name = self.settings.file_name
