@@ -28,7 +28,7 @@ class Settings:
 
         #### File Settins ####
 
-        self.file_name = 'C:/Users/adampi/Desktop/MOJE/programowanie/Python/Alien Invasion Game/high_scores.txt'
+        self.file_name = 'high_scores.txt'
 
         self.initialize_dynamic_settings()
 

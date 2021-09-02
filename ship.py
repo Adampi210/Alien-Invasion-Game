@@ -18,7 +18,7 @@ class Ship(Sprite): # Then I create a class Ship
 
         ###### Format Starship ######
 
-        self.image = pg.image.load('C:/Users/adampi/Desktop/MOJE/programowanie/Python/Alien Invasion Game/images/Starship.bmp') # Firs I define attribute self.image, and load the image of my starship there
+        self.image = pg.image.load('images/Starship.bmp') # Firs I define attribute self.image, and load the image of my starship there
         self.rect = self.image.get_rect() # Then I define attribute self.rect, which this time stores the rectangle info of the image imported
         # In other word this als currently has a point (0, 0) as location, and the width and height of he image imported
         self.rect.midbottom = self.screen_rect.midbottom # Here I use the screen rectangle to move the image to the mid bottom of the screen

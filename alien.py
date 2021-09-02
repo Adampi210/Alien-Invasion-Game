@@ -8,7 +8,7 @@ class Alien(Sprite): # Then I create an Alien class with Sprite as its parent
         self.screen = game.screen # and inititate some others like scree, settings, image, and positions
         self.settings = game.settings
 
-        self.image = pg.image.load('C:/Users/adampi/Desktop/MOJE/programowanie/Python/Alien Invasion Game/images/alien.bmp')
+        self.image = pg.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width # Initial position is later changed
         self.rect.y = self.rect.height
