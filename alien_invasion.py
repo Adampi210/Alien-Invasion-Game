@@ -22,10 +22,10 @@ class AlienInvasion:
         pg.init()
         # here I initiate the pygame module, and setup the display which will be our screen
         # I also set the caption of the display to be Alien Invasion Game
-        self.settings = Settings() # I use the settings class to store all game settings
         #self.screen = pg.display.set_mode((self.settings.screen_width, self.settings.screen_height)) # I can determine the size of the screen
         self.screen = pg.display.set_mode((0, 0), pg.FULLSCREEN)
-        self.settings.screen_width = self.screen.get_rect().width
+        self.settings = Settings(self.screen) # I use the settings class to store all game settings
+        self.settings.scrButtoneen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
         pg.display.set_caption("Alien Invasion Game") # Here I set the name for the display
         self.ship = Ship(self) # Here I create ship attribute using ship class written in ship.py program
@@ -135,7 +135,7 @@ class AlienInvasion:
         # That is because I shouldnt change the limits of the loop inside a loop, as it can lead to mistakes
         # And by deleting the bullets we change I list, so I change the limit of the loop
         # That is why I use a copy of bullet list - one that will not change
-            if bullet.rect.bottom <=0: # then in that loop, if I detect that the bullet is off screen
+            if bullet.rect.bottom <= 0: # then in that loop, if I detect that the bullet is off screen
                 self.bullets.remove(bullet) # I delete it
 
         self._check_bullets_alien_collisions() # Check for collisions if bullets collided with aliens

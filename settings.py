@@ -1,15 +1,15 @@
 # This program will store all the settings for my game in the Settings class
 # It will aslo be imported into my alien_invasion program to save there space
 class Settings:
-    def __init__(self):
+    def __init__(self, screen):
 
         #### Game Settings ####
 
         self.speed_up_multiplier = 1.1 # How quickly the game speeds up
 
         #### Screen Settings ####
-        self.screen_width = 1200 # here I determine the width of the display screen
-        self.screen_height = 800 # here I determine the height of the display screen
+        self.screen_width = screen.get_size()[0] # here I determine the width of the display screen TODO
+        self.screen_height = screen.get_size()[1] # here I determine the height of the display screen
         self.bg_color = (0, 0, 26) # here I determine the background color of the display screen
 
         #### Ship Settings ####
@@ -17,7 +17,7 @@ class Settings:
         self.ship_limit -= 1
 
         #### Bullet Settings ####
-        self.bullet_width = 3
+        self.bullet_width = 3000
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_available = 3 # This will limit the number of bullets
